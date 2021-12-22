@@ -14,9 +14,9 @@ export class ResultsGridComponent implements OnInit {
   constructor(private moviesService:MoviesService ) { }
 
   ngOnInit(): void {
-    // this.moviesService.movies.subscribe(
-    //   (reponse)=>{console.log("----on met à jour les movies dans la grid"); console.log(reponse.results)  }
-    // )
+    this.moviesService.movies.subscribe(
+      (reponse)=>{console.log("----on met à jour les movies dans la grid"); console.log(reponse.results); this.movies=reponse.results  }
+    )
   }
 
 }

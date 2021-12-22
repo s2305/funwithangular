@@ -1,1 +1,15 @@
 <p>results-grid works!</p>
+
+<div>
+
+    <div *ngFor="let movie of movies">
+        <div class="movie-card">
+            <div class="imgcard">
+                <img [src]="'https://image.tmdb.org/t/p/w300/' +movie.poster_path"/>
+            </div> 
+            <div class="movietitle">
+                {{movie.title}}
+            </div>
+        </div>
+    </div>
+</div>

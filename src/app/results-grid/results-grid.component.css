@@ -1,0 +1,30 @@
+.imgcard {
+   
+}
+
+.movie-card {
+    width:200px;
+    height:270px;
+    -webkit-box-shadow: 4px 8px 13px -6px rgba(0,0,0,0.93); 
+box-shadow: 4px 8px 13px -6px rgba(0,0,0,0.93);
+margin:10px;
+}
+
+img {}
+
+.imgcard {
+   
+
+}
+
+.imgcard img
+{
+    width:200px;
+    height:180px;  
+    object-fit:cover;
+}
+
+.movietitle {
+    padding:10px;
+    font-size:25px;
+}
