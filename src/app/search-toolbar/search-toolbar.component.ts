@@ -30,22 +30,28 @@ export class SearchToolbarComponent implements OnInit {
     );
     console.log("ngoninit de la search bar--");
     
-    this.moviesService.getMovies();
-
-    this.moviesService.movies.subscribe(
-      (reponse)=>{console.log("on met à jour les movies dans la search bar"); 
-      console.log(reponse.results);
+    
+    this.moviesService.movies$.subscribe(
+      (reponse)=>{
+        //console.log("on met à jour les movies dans la search bar"); 
+      //console.log(reponse.results);
       var listTitles = reponse.results.map(x=>x.title);
      
-      console.log("ouloulou");
-      console.log(listTitles);
+     // console.log("ouloulou");
+     // console.log(listTitles);
       this.options = listTitles;
     });
+
+    this.moviesService.getMovies("star wars").subscribe(()=>{console.log("search for star wars")});
+
    
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
+    //console.log(value);
+    this.moviesService.getMovies(value).subscribe(()=>{console.log("search for " + value)});
+   
 
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
