@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable, of} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import { CommunesServiceService } from '../communes-service.service';
 
 
 @Component({
@@ -15,11 +16,17 @@ export class SearchToolbarComponent implements OnInit {
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]>=of(["yyy"]);
 
+  constructor(private communeService:CommunesServiceService)
+  {
+       
+  }  
+
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value)),
     );
+    this.communeService.getCommunes().subscribe((data)=>console.log(data));
   }
 
   private _filter(value: string): string[] {
