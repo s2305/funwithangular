@@ -25,6 +25,19 @@ img {}
 }
 
 .movietitle {
+    text-align: left;
     padding:10px;
-    font-size:25px;
+    font-size:18px;
+}
+
+
+.gridcontainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* background-color: beige; */
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }

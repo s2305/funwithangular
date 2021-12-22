@@ -1,8 +1,8 @@
 <p>results-grid works!</p>
 
-<div>
+<div class="gridcontainer">
 
-    <div *ngFor="let movie of movies">
+    <div *ngFor="let movie of movies" >
         <div class="movie-card">
             <div class="imgcard">
                 <img [src]="'https://image.tmdb.org/t/p/w300/' +movie.poster_path"/>
