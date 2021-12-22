@@ -14,7 +14,7 @@ import { Movie } from '../movies';
 export class SearchToolbarComponent implements OnInit {
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = [];
   filteredOptions: Observable<string[]>=of(["yyy"]);
   movies:Movie[]=[];
 
@@ -32,8 +32,15 @@ export class SearchToolbarComponent implements OnInit {
     
     this.moviesService.getMovies();
 
-    this.moviesService.movies.subscribe((reponse)=>{console.log("on met à jour les movies dans la search bar"); 
-    console.log(reponse.results)});
+    this.moviesService.movies.subscribe(
+      (reponse)=>{console.log("on met à jour les movies dans la search bar"); 
+      console.log(reponse.results);
+      var listTitles = reponse.results.map(x=>x.title);
+     
+      console.log("ouloulou");
+      console.log(listTitles);
+      this.options = listTitles;
+    });
    
   }
 
