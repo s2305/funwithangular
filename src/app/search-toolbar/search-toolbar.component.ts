@@ -2,7 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable, of} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-import { CommunesServiceService } from '../communes-service.service';
+import { MoviesService } from '../movies-service.service';
+import { Movie } from '../movies';
 
 
 @Component({
@@ -15,8 +16,9 @@ export class SearchToolbarComponent implements OnInit {
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions: Observable<string[]>=of(["yyy"]);
+  movies:Movie[]=[];
 
-  constructor(private communeService:CommunesServiceService)
+  constructor(private moviesService:MoviesService)
   {
        
   }  
@@ -26,7 +28,13 @@ export class SearchToolbarComponent implements OnInit {
       startWith(''),
       map(value => this._filter(value)),
     );
-    this.communeService.getCommunes().subscribe((data)=>console.log(data));
+    console.log("ngoninit de la search bar--");
+    
+    this.moviesService.getMovies();
+
+    this.moviesService.movies.subscribe((reponse)=>{console.log("on met à jour les movies dans la search bar"); 
+    console.log(reponse.results)});
+   
   }
 
   private _filter(value: string): string[] {

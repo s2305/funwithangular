@@ -22,6 +22,8 @@ import {
 import {
   MatInputModule
 } from '@angular/material/input';
+import { ResultsGridComponent } from './results-grid/results-grid.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    SearchToolbarComponent
+    SearchToolbarComponent,
+    ResultsGridComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
