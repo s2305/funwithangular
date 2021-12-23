@@ -1,10 +1,29 @@
 .hidedetail
 {
     display: none;
+   
+    
 }
 
-.detailmoviecontainer
+@keyframes fadeIn {
+    from {
+        width:25%;
+        
+        opacity: 0;
+    }
+    to {
+        width:50%;
+        
+       opacity: 1;
+    }
+}
+
+.detailmoviecontainer   
 {
+
+    animation: fadeIn 0.3s;
+   
+
     width:50%;
     height:auto;
     background-color: white;
