@@ -27,6 +27,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { BlackOverlayComponent } from './black-overlay/black-overlay.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
+import { MoviesSearchComponent } from './movies-search/movies-search.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
     MovieCardComponent,
     DetailMovieComponent,
     BlackOverlayComponent,
-    AddMovieComponent
+    AddMovieComponent,
+    MoviesSearchComponent
   ],
   imports: [
     BrowserModule,
