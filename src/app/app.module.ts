@@ -26,6 +26,7 @@ import { ResultsGridComponent } from './results-grid/results-grid.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { BlackOverlayComponent } from './black-overlay/black-overlay.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BlackOverlayComponent } from './black-overlay/black-overlay.component';
     ResultsGridComponent,
     MovieCardComponent,
     DetailMovieComponent,
-    BlackOverlayComponent
+    BlackOverlayComponent,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,
