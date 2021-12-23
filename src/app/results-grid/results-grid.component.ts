@@ -10,6 +10,7 @@ import { MoviesService } from '../movies-service.service';
 export class ResultsGridComponent implements OnInit {
 
   movies:Movie[]=[]
+  selectedMovie?:Movie;
 
   constructor(private moviesService:MoviesService ) { }
 
@@ -20,5 +21,23 @@ export class ResultsGridComponent implements OnInit {
         console.log(reponse.results); this.movies=reponse.results  }
     )
   }
+
+  onSelect(movie:Movie)
+  {
+    this.selectedMovie = movie;
+  }
+
+  unSelect()
+  {
+    console.log("unselect");
+    this.selectedMovie = undefined;
+  }
+
+  fermetudeDuDetail(valeur:string)
+  {
+    console.log("fermeture data");
+    this.unSelect();
+  }
+  
 
 }

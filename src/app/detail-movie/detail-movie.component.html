@@ -1,0 +1,77 @@
+
+<app-black-overlay *ngIf="movie" (close)="onClose()"></app-black-overlay>
+
+<div class="detailmoviecontainer" *ngIf="movie">
+
+    <div  class="containerdetail">
+
+        <div class="colposter">  
+            <div>
+                <img [src]="'https://image.tmdb.org/t/p/w300/' +movie.poster_path"/>
+            </div>
+        </div>
+
+        <div class="coltxt">
+            <div>
+                <span class="lbl">id</span>
+                <span class="txt">{{movie.id}}</span>
+            </div>
+    
+    
+            <div>
+                <span class="lbl">original_language</span>
+                <span class="txt">{{movie.original_language}}</span>
+            </div>
+    
+    
+            <div>
+                <span class="lbl">original_title</span>
+                <span class="txt">{{movie.original_title}}</span>
+            </div>
+    
+    
+            <div>
+                <span class="lbl">overview</span>
+                <span class="txt">{{movie.overview}}</span>
+            </div>
+    
+    
+            <div>
+                <span class="lbl">popularity</span>
+                <span class="txt">{{movie.popularity}}</span>
+            </div>
+    
+    
+           
+    
+            <div>
+                <span class="lbl">release_date</span>
+                <span class="txt">{{movie.release_date}}</span>
+            </div>
+    
+            <div>
+                <span class="lbl">title</span>
+                <span class="txt">{{movie.title}}</span>
+            </div>
+    
+    
+            <div>
+                <span class="lbl">video</span>
+                <span class="txt">{{movie.video}}</span>
+            </div>
+    
+            <div>
+                <span class="lbl">vote_average</span>
+                <span class="txt">{{movie.vote_average}}</span>
+            </div>
+    
+            <div>
+                <span class="lbl">vote_count</span>
+                <span class="txt">{{movie.vote_count}}</span>
+            </div>
+    
+        </div>
+        
+    </div>
+
+</div>

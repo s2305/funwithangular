@@ -1,9 +1,9 @@
-<p>results-grid works!</p>
+<!-- <p>results-grid works!</p> -->
 
-<div class="gridcontainer">
+<div class="gridcontainer"> 
 
     <div *ngFor="let movie of movies" >
-        <div class="movie-card">
+        <div class="movie-card" (click)="onSelect(movie)">
             <div class="imgcard">
                 <img [src]="'https://image.tmdb.org/t/p/w300/' +movie.poster_path"/>
             </div> 
@@ -13,3 +13,5 @@
         </div>
     </div>
 </div>
+
+<app-detail-movie [movie]="selectedMovie" (fermetureDetail)="fermetudeDuDetail('ddd')" ></app-detail-movie>

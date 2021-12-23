@@ -1,0 +1,62 @@
+.hidedetail
+{
+    display: none;
+}
+
+.detailmoviecontainer
+{
+    width:50%;
+    height:auto;
+    background-color: white;
+    -webkit-box-shadow: 4px 8px 13px -6px rgba(0,0,0,0.93); 
+    box-shadow: 4px 8px 13px -6px rgba(0,0,0,0.93);
+    border-radius: 25px;
+    padding: 25px;
+    
+    position: fixed;
+    top: 0; left: 0;
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+    
+
+
+}
+
+.containerdetail
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.colposter
+{
+    width: 300px;
+}
+
+.colposter img
+{
+    width: 250px;
+}
+.coltxt
+{
+    padding: 20px;
+}
+
+.lbl {
+    color: black;
+    font-size: 15px;
+    margin: 0px 10px 10px 0px;
+    font-weight: 600;
+    width: 150px;
+    display: inline-block;
+}
+
+.txt
+{
+    color: gray;
+    font-size: 15px;
+    margin: 0px 10px 10px 0px;
+    font-weight: 400;
+}
+
+
+
