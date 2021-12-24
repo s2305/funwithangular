@@ -41,3 +41,10 @@ img {}
     justify-content: center;
     
 }
+
+.positionbtadd
+{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}

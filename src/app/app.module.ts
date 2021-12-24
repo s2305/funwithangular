@@ -13,6 +13,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { SearchToolbarComponent } from './search-toolbar/search-toolbar.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon'
+import {MatButtonModule} from '@angular/material/button';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 // common-widgets.module.ts
@@ -53,6 +56,8 @@ import { MoviesSearchComponent } from './movies-search/movies-search.component';
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
+    MatIconModule,
 //     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
 // // and returns simulated server responses.
 // // Remove it when a real server is ready to receive requests.

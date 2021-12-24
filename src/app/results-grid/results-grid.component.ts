@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movies';
 import { MoviesService } from '../movies-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-results-grid',
@@ -12,7 +13,7 @@ export class ResultsGridComponent implements OnInit {
   movies:Movie[]=[]
   selectedMovie?:Movie;
 
-  constructor(private moviesService:MoviesService ) { }
+  constructor(private moviesService:MoviesService , private router: Router ) { }
 
   ngOnInit(): void {
     this.moviesService.movies$.subscribe(
@@ -39,5 +40,10 @@ export class ResultsGridComponent implements OnInit {
     this.unSelect();
   }
   
+  navigateToAddMovie()
+  {
+    this.router.navigateByUrl('/addmovie');
+  }
+ 
 
 }
