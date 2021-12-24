@@ -13,9 +13,11 @@ export class DetailMovieComponent implements OnInit {
   @Input() movie:Movie | undefined
   @Output() fermetureDetail:EventEmitter<string>=new EventEmitter<string>();
 
-  constructor(public localStorage:LocalstorageService,private _snackBar: MatSnackBar) { }
+  isFavorite?:boolean;
+  constructor(public localStorage:LocalstorageService,private _snackBar: MatSnackBar,public localStorageService:LocalstorageService) { }
 
   ngOnInit(): void {
+    this.isAFavorite()
   }
 
   onClose()
@@ -25,9 +27,22 @@ export class DetailMovieComponent implements OnInit {
 
   showSnackBar(txt : string)
   {
-    let snackBarRef = this._snackBar.open('This movie is part of your favorite now !',undefined,{
+    let snackBarRef = this._snackBar.open(txt,undefined,{
       duration: 3000
     });
+  }
+
+  isAFavorite()
+  {
+    if(this.movie)
+    {
+    this.isFavorite = this.localStorageService.getMovie(this.movie!.id)!=null;
+   
+    }
+    else
+    {
+      this.isFavorite = true;
+    }
   }
 
 }

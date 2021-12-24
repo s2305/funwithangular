@@ -38,6 +38,8 @@ export class FavoritesGridComponent implements OnInit {
     this.selectedMovie = undefined;
   }
 
+  
+
   fermetudeDuDetail(valeur:string)
   {
     console.log("fermeture data");

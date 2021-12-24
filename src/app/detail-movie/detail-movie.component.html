@@ -11,14 +11,14 @@
 
             <div class="buttonsdiv">
                 <div>
-                    <button (click)="localStorage.addMovie(movie);showSnackBar('yep')" mat-icon-button color="warn" aria-label="favorite">
-                        <mat-icon>favorite</mat-icon>
+                    <button (click)="localStorage.removeMovie(movie.id);showSnackBar('This movie is removed from your favorite !')" [hidden]="isFavorite" mat-icon-button color="warn" aria-label="favorite">
+                        <mat-icon [hidden]="isFavorite">favorite</mat-icon>
                     </button>
                 </div>
 
                 <div>
-                    <button mat-icon-button aria-label="favorite">
-                        <mat-icon>favorite_border</mat-icon>
+                    <button mat-icon-button aria-label="favorite" (click)="localStorage.addMovie(movie);showSnackBar('This movie is part of your favorite now !')" [hidden]="!isFavorite">{{isFavorite}}
+                        <mat-icon [hidden]="isFavorite">favorite_border</mat-icon>
                     </button>
                 </div>
 
