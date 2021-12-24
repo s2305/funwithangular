@@ -14,13 +14,18 @@ export class FavoritesGridComponent implements OnInit {
   movies:Movie[]=[]
   selectedMovie?:Movie;
 
-  constructor(private moviesService:MoviesService , private router: Router,private localStorageService:LocalstorageService ) { }
+  constructor(private moviesService:MoviesService , private router: Router,public localStorageService:LocalstorageService ) { }
 
   ngOnInit(): void {
      
-    this.movies=this.localStorageService.getAllMovies();
+    this.fetchMovies();
  
 }
+
+  fetchMovies()
+  {
+    this.movies=this.localStorageService.getAllMovies();
+  }
 
   onSelect(movie:Movie)
   {

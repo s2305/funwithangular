@@ -31,7 +31,9 @@ img {}
 .movietitle {
     text-align: left;
     padding:10px;
-    font-size:18px;
+    font-size:14px;
+    color: gray;
+    height: 40px;
 }
 
 

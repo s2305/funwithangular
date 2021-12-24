@@ -10,7 +10,16 @@
             <div class="movietitle">
                 {{movie.title}}
             </div>
+            <div style="text-align: right;">
+                <button (click)="localStorageService.removeMovie(movie.id);$event.stopPropagation();fetchMovies()" mat-icon-button  aria-label="Example icon button with a delete icon">
+                    <mat-icon>delete_outline</mat-icon>
+                  </button>
+            </div>
         </div>
+    </div>
+    <div style="text-align: center;" *ngIf="movies.length>0?false:true">
+         <img src="assets/images/nofavorite.gif" style="width:290px">
+         <h2>There is no favorite here for now...</h2>
     </div>
 </div>
 
