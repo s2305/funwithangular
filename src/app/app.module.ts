@@ -16,7 +16,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import {MatMenuModule} from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 // common-widgets.module.ts
@@ -62,6 +62,7 @@ import { FavoritesGridComponent } from './favorites-grid/favorites-grid.componen
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
+    MatMenuModule,
 //     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
 // // and returns simulated server responses.
 // // Remove it when a real server is ready to receive requests.
