@@ -5,26 +5,22 @@ import { Router } from '@angular/router';
 import { LocalstorageService } from '../localstorage.service';
 
 @Component({
-  selector: 'app-results-grid',
-  templateUrl: './results-grid.component.html',
-  styleUrls: ['./results-grid.component.css']
+  selector: 'app-favorites-grid',
+  templateUrl: './favorites-grid.component.html',
+  styleUrls: ['./favorites-grid.component.css']
 })
-export class ResultsGridComponent implements OnInit {
+export class FavoritesGridComponent implements OnInit {
 
   movies:Movie[]=[]
   selectedMovie?:Movie;
 
-  constructor(private moviesService:MoviesService , private router: Router ) { }
-
- 
+  constructor(private moviesService:MoviesService , private router: Router,private localStorageService:LocalstorageService ) { }
 
   ngOnInit(): void {
-    this.moviesService.movies$.subscribe(
-      (reponse)=>{
-        console.log("----on met à jour les movies dans la grid"); 
-        console.log(reponse.results); this.movies=reponse.results  }
-    )
-  }
+     
+    this.movies=this.localStorageService.getAllMovies();
+ 
+}
 
   onSelect(movie:Movie)
   {
@@ -48,5 +44,6 @@ export class ResultsGridComponent implements OnInit {
     this.router.navigateByUrl('/addmovie');
   }
  
+
 
 }

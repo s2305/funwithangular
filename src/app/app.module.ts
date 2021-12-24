@@ -15,6 +15,7 @@ import { SearchToolbarComponent } from './search-toolbar/search-toolbar.componen
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatIconModule } from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
@@ -31,6 +32,7 @@ import { DetailMovieComponent } from './detail-movie/detail-movie.component';
 import { BlackOverlayComponent } from './black-overlay/black-overlay.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { MoviesSearchComponent } from './movies-search/movies-search.component';
+import { FavoritesGridComponent } from './favorites-grid/favorites-grid.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { MoviesSearchComponent } from './movies-search/movies-search.component';
     DetailMovieComponent,
     BlackOverlayComponent,
     AddMovieComponent,
-    MoviesSearchComponent
+    MoviesSearchComponent,
+    FavoritesGridComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { MoviesSearchComponent } from './movies-search/movies-search.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatSnackBarModule,
 //     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
 // // and returns simulated server responses.
 // // Remove it when a real server is ready to receive requests.
