@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { LocalstorageService } from '../localstorage.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Movie } from '../movies';
@@ -8,7 +8,7 @@ import { Movie } from '../movies';
   templateUrl: './detail-movie.component.html',
   styleUrls: ['./detail-movie.component.css']
 })
-export class DetailMovieComponent implements OnInit {
+export class DetailMovieComponent implements OnInit,OnChanges {
 
   @Input() movie:Movie | undefined
   @Output() fermetureDetail:EventEmitter<string>=new EventEmitter<string>();
@@ -20,6 +20,10 @@ export class DetailMovieComponent implements OnInit {
     this.isAFavorite()
   }
 
+  ngOnChanges(changes: SimpleChanges) {
+    this.isAFavorite()
+  }
+
   onClose()
   {
     this.fermetureDetail.emit("femeture du detail")
@@ -27,6 +31,7 @@ export class DetailMovieComponent implements OnInit {
 
   showSnackBar(txt : string)
   {
+    this.isAFavorite();
     let snackBarRef = this._snackBar.open(txt,undefined,{
       duration: 3000
     });
@@ -41,7 +46,7 @@ export class DetailMovieComponent implements OnInit {
     }
     else
     {
-      this.isFavorite = true;
+      this.isFavorite = false;
     }
   }
 
