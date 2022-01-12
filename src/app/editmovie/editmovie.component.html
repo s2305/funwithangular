@@ -1,0 +1,48 @@
+<p>editmovie works   d!</p>
+
+
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id" class="lbleditform">id: </label>
+        <input id="id" type="text" formControlName="id">
+    </div>
+
+    <div class="form-group">
+        <label for="last-name" class="lbleditform">original_language: </label>
+        <input id="last-name" type="text" formControlName="original_language">
+    </div>
+
+    <div class="form-group">
+        <label for="original_title" class="lbleditform">original_title: </label>
+        <input id="original_title" type="text" formControlName="original_title">
+    </div>
+
+    <div class="form-group">
+        <label for="overview" class="lbleditform">overview: </label>
+        <input id="overview" type="text" formControlName="overview">
+    </div>
+
+    <div class="form-group">
+        <label for="popularity" class="lbleditform">popularity: </label>
+        <input id="popularity" type="text" formControlName="popularity">
+    </div>
+
+    <div class="form-group">
+         <label for="release_date" class="lbleditform">release_date: </label>
+        <input id="release_date" type="text" formControlName="release_date">
+    </div>
+
+    <div class="form-group">
+        <label for="title" class="lbleditform">title: </label>
+        <input id="title" type="text" formControlName="title">
+    </div>
+
+    <div class="form-group">
+        <label for="video" class="lbleditform">video: </label>
+        <input id="video" type="text" formControlName="video">
+    </div>
+
+
+    <button class="btn btn-success" type="submit" [disabled]="!movieForm.valid">Save</button>
+
+</form>

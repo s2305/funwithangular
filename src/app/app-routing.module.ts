@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditmovieComponent } from './editmovie/editmovie.component';
 import { FavoritesGridComponent } from './favorites-grid/favorites-grid.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: 'searchmovies', component: MoviesSearchComponent  },
   { path: 'addmovie', component: AddMovieComponent  },
   { path: 'favorites', component: FavoritesGridComponent  },
+  { path: 'editmovie', component: EditmovieComponent  },
+  
 
   { path: '', redirectTo: '/searchmovies', pathMatch: 'full' },
 

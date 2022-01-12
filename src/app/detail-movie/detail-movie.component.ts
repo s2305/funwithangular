@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import { LocalstorageService } from '../localstorage.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Movie } from '../movies';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-movie',
@@ -14,7 +15,8 @@ export class DetailMovieComponent implements OnInit,OnChanges {
   @Output() fermetureDetail:EventEmitter<string>=new EventEmitter<string>();
 
   isFavorite?:boolean;
-  constructor(public localStorage:LocalstorageService,private _snackBar: MatSnackBar,public localStorageService:LocalstorageService) { }
+  constructor(public localStorage:LocalstorageService,private _snackBar: MatSnackBar,
+    public localStorageService:LocalstorageService, private router:Router) { }
 
   ngOnInit(): void {
     this.isAFavorite()
@@ -50,4 +52,10 @@ export class DetailMovieComponent implements OnInit,OnChanges {
     }
   }
 
+  goToEditMovie()
+  {
+    this.router.navigateByUrl('/editmovie');
+  }
+
+ 
 }

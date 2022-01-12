@@ -33,6 +33,7 @@ import { BlackOverlayComponent } from './black-overlay/black-overlay.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { MoviesSearchComponent } from './movies-search/movies-search.component';
 import { FavoritesGridComponent } from './favorites-grid/favorites-grid.component';
+import { EditmovieComponent } from './editmovie/editmovie.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FavoritesGridComponent } from './favorites-grid/favorites-grid.componen
     BlackOverlayComponent,
     AddMovieComponent,
     MoviesSearchComponent,
-    FavoritesGridComponent
+    FavoritesGridComponent,
+    EditmovieComponent
   ],
   imports: [
     BrowserModule,
