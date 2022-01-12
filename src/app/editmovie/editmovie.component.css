@@ -2,3 +2,43 @@
 {
     width:200px;
 }
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: .8571em;
+    margin-bottom: 5px;
+    color: #9a9a9a;
+}
+
+.form-group .form-control, .input-group .form-control {
+    padding: 10px;
+}
+.form-control {
+    height: unset;
+}
+.form-control {
+    display: inline-block;
+    width:50%;  
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #66615b;
+    line-height: normal;
+    font-size: 14px;
+    transition: color .3s ease-in-out,border-color .3s ease-in-out,background-color .3s ease-in-out;
+    box-shadow: none;
+}
+
+.invalid:not(form)
+{
+    border:  1px solid #ff0000b5;
+}
+
+.error_msg
+{
+    display: block;
+    color: #ff0000b5;
+    font-size: 12px;
+    margin-left: 200px;
+}

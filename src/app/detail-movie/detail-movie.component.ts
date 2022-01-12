@@ -52,9 +52,9 @@ export class DetailMovieComponent implements OnInit,OnChanges {
     }
   }
 
-  goToEditMovie()
+  goToEditMovie(film : Movie)
   {
-    this.router.navigateByUrl('/editmovie');
+    this.router.navigateByUrl('/editmovie', { state: { movie: film }});
   }
 
  
